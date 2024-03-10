@@ -5,7 +5,13 @@ import cors from "cors";
 const app = express();
 app.use(cors());
 
-mongoose.connect("mongodb://127.0.0.1:27017/keepDb").then(()=>{
+// mongoose.connect("mongodb://127.0.0.1:27017/keepDb").then(()=>{
+//     console.log("Database is connected...")
+// }).catch((err)=>{
+//     console.log(err);
+// })
+
+mongoose.connect("mongodb+srv://kelvin123:Kelvin123@cluster0.yntrczs.mongodb.net/keepDb?retryWrites=true&w=majority&appName=Cluster0").then(()=>{
     console.log("Database is connected...")
 }).catch((err)=>{
     console.log(err);
