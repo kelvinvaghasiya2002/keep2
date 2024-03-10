@@ -27,14 +27,14 @@ const keepItems = mongoose.model("keepItems",keepSchema);
 
 
 app.get("/",(req,res)=>{
-    keepItems.find().then((Items)=>{
-        res.json(Items)
-    }).catch((err)=>{
-        res.json({
-            error:"error"
-        })
-    })
-    // res.send("<h2>Hello World</h2>");
+    // keepItems.find().then((Items)=>{
+    //     res.json(Items)
+    // }).catch((err)=>{
+    //     res.json({
+    //         error:"error"
+    //     })
+    // })
+    res.send("<h2>Hello World</h2>");
 })
 
 
