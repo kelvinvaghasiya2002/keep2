@@ -12,7 +12,8 @@ function App() {
     function updateNotes(note){
         async function Add() {
             try{
-                const response = await axios.post(`http://localhost:4000/post?title=${note.title}&content=${note.content}`);
+                // const response = await axios.post(`http://localhost:4000/post?title=${note.title}&content=${note.content}`);
+                const response = await axios.post(`https://keep2-six.vercel.app/post?title=${note.title}&content=${note.content}`);
                 return response.data;
             }catch(err){
                 console.log(err)
@@ -36,7 +37,8 @@ function App() {
 
         async function Delete() {
             try{
-                const response = await axios.delete(`http://localhost:4000/delete/${id}`);
+                // const response = await axios.delete(`http://localhost:4000/delete/${id}`);
+                const response = await axios.delete(`https://keep2-six.vercel.app/delete/${id}`);
                 // console.log(response.data);
                 return response.data
             }catch(err){
@@ -60,7 +62,8 @@ function App() {
     useEffect(()=>{
         async function call() {
             try{
-                const response = await axios.get("http://localhost:4000");
+                // const response = await axios.get("http://localhost:4000");
+                const response = await axios.get("https://keep2-six.vercel.app");
                 return response.data ;
             }catch(err){
                 console.log(err);
